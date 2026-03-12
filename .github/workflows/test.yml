@@ -1,26 +1,26 @@
-name: Automation Tests
+name: Selenium Grid Tests
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  build:
+
+  test:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Build Project
-        run: mvn clean install
+    - name: Start Selenium Grid
+      run: docker-compose up -d
 
-      - name: Run Tests
-        run: mvn test
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Run Tests
+      run: mvn test
