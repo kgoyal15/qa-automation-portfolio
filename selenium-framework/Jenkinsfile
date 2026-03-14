@@ -19,6 +19,7 @@ pipeline {
 
         stage('Start Selenium Grid') {
             steps {
+                sh 'docker-compose -f selenium-framework/docker-compose.yml down --remove-orphans || true'
                 sh 'docker-compose -f selenium-framework/docker-compose.yml up -d'
                 sh 'echo "Waiting for Grid to be ready..." && sleep 15'
             }
