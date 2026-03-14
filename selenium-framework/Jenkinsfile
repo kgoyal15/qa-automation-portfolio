@@ -1,0 +1,49 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven'
+    }
+
+    environment {
+        GRID_URL = 'http://host.docker.internal:4444'
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Start Selenium Grid') {
+            steps {
+                sh 'docker-compose -f selenium-framework/docker-compose.yml up -d'
+                sh 'echo "Waiting for Grid to be ready..." && sleep 15'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                dir('selenium-framework') {
+                    sh 'mvn clean test -Dgrid.url=${GRID_URL}'
+                }
+            }
+        }
+
+        stage('Publish Allure Report') {
+            steps {
+                allure([
+                    results: [[path: 'selenium-framework/allure-results']]
+                ])
+            }
+        }
+    }
+
+    post {
+        always {
+            sh 'docker-compose -f selenium-framework/docker-compose.yml down'
+        }
+    }
+}
