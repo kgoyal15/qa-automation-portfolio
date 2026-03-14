@@ -35,9 +35,10 @@ pipeline {
 
         stage('Publish Allure Report') {
             steps {
-                allure([
+                allure(
+                    commandline: 'allure',
                     results: [[path: 'selenium-framework/allure-results']]
-                ])
+                )
             }
         }
     }
