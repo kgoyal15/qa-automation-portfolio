@@ -1,0 +1,30 @@
+export const ROUTES = {
+  HOME: '/',
+  LOGIN: '/login',
+  LOGOUT: '/logout',
+  DASHBOARD: '/dashboard',
+  PROFILE: '/profile',
+  SETTINGS: '/settings',
+  PRODUCTS: '/products',
+  PRODUCT_DETAIL: (id: string | number) => `/products/${id}`,
+  CART: '/cart',
+  CHECKOUT: '/checkout',
+  ORDER_CONFIRMATION: '/order-confirmation',
+  ORDER_HISTORY: '/orders',
+  ORDER_DETAIL: (id: string | number) => `/orders/${id}`,
+  FORGOT_PASSWORD: '/forgot-password',
+  RESET_PASSWORD: '/reset-password',
+  REGISTER: '/register',
+} as const;
+
+export const API_ROUTES = {
+  AUTH_LOGIN: '/auth/login',
+  AUTH_LOGOUT: '/auth/logout',
+  AUTH_REFRESH: '/auth/refresh',
+  USERS: '/users',
+  USER_BY_ID: (id: number) => `/users/${id}`,
+  PRODUCTS: '/products',
+  PRODUCT_BY_ID: (id: number) => `/products/${id}`,
+  ORDERS: '/orders',
+  ORDER_BY_ID: (id: number) => `/orders/${id}`,
+} as const;

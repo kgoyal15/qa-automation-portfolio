@@ -1,0 +1,50 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "Enterprise-grade Playwright test automation framework in TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ci": "playwright test --reporter=json,html,allure-playwright",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:api": "playwright test tests/api/",
+    "test:e2e": "playwright test tests/e2e/",
+    "report:open": "playwright show-report reports/html",
+    "report:allure:generate": "allure generate reports/allure-results -o reports/allure-report --clean",
+    "report:allure:open": "allure open reports/allure-report",
+    "report:allure": "npm run report:allure:generate && npm run report:allure:open",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"**/*.{ts,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,md}\"",
+    "clean:reports": "node scripts/cleanReports.js",
+    "seed:data": "ts-node scripts/seedData.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "winston": "^3.13.0",
+    "@faker-js/faker": "^8.4.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7",
+    "allure-playwright": "^3.0.0",
+    "allure-commandline": "^2.29.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.1",
+    "prettier": "^3.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

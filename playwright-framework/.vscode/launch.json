@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Playwright Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": ["test", "--debug", "${file}"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "TEST_ENV": "qa",
+        "PWDEBUG": "1"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Debug Current Test File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": ["test", "--debug", "--project=chromium", "${relativeFile}"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "TEST_ENV": "qa",
+        "PWDEBUG": "1"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "name": "Debug API Tests",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": ["test", "--debug", "tests/api/"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "TEST_ENV": "qa"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

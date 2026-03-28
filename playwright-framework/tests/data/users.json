@@ -1,0 +1,36 @@
+{
+  "validUser": {
+    "email": "test@qa.example.com",
+    "password": "QaP@ss123",
+    "name": "Test User",
+    "role": "user"
+  },
+  "adminUser": {
+    "email": "admin@qa.example.com",
+    "password": "AdminP@ss123",
+    "name": "Admin User",
+    "role": "admin"
+  },
+  "invalidUsers": [
+    {
+      "email": "notfound@example.com",
+      "password": "WrongPassword",
+      "expectedError": "Invalid email or password"
+    },
+    {
+      "email": "badformat",
+      "password": "anything",
+      "expectedError": "Please enter a valid email address"
+    },
+    {
+      "email": "",
+      "password": "",
+      "expectedError": "Email is required"
+    }
+  ],
+  "lockedUser": {
+    "email": "locked@qa.example.com",
+    "password": "LockedP@ss123",
+    "expectedError": "Your account has been locked"
+  }
+}

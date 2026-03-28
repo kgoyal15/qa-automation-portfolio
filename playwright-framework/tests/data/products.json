@@ -1,0 +1,43 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "sku": "WH-1000XM5",
+      "price": 349.99,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": 2,
+      "name": "Mechanical Keyboard",
+      "sku": "MK-TKL-BLK",
+      "price": 129.99,
+      "category": "Electronics",
+      "inStock": true
+    },
+    {
+      "id": 3,
+      "name": "Ergonomic Mouse",
+      "sku": "EM-MX-VERT",
+      "price": 79.99,
+      "category": "Electronics",
+      "inStock": false
+    }
+  ],
+  "shippingDetails": {
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "address": "123 Main Street",
+    "city": "New York",
+    "state": "NY",
+    "zip": "10001",
+    "country": "US"
+  },
+  "paymentDetails": {
+    "cardNumber": "4111111111111111",
+    "expiryDate": "12/27",
+    "cvv": "123",
+    "nameOnCard": "Jane Doe"
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\playwright.config.ts",
+    "rootDir": "C:/Users/sgoya/OneDrive/Documents/GitHub/qa-automation-portfolio/SauceDemoScripts/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/sgoya/OneDrive/Documents/GitHub/qa-automation-portfolio/SauceDemoScripts/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/sgoya/OneDrive/Documents/GitHub/qa-automation-portfolio/SauceDemoScripts/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 11,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test-1\\login.spec.ts",
+      "file": "test-1/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login",
+          "file": "test-1/login.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Successful Login with Standard User Credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1524,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T01:39:03.397Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6467172fcc6406f3f550-1df466beb548d804ff2f",
+              "file": "test-1/login.spec.ts",
+              "line": 13,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "test-2\\login-no-credentials.spec.ts",
+      "file": "test-2/login-no-credentials.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Login",
+          "file": "test-2/login-no-credentials.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Login Attempt Without Credentials Displays Required Error Message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1446,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T01:39:03.308Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b46a93fb162c402b3304-9acb92adbb8425943beb",
+              "file": "test-2/login-no-credentials.spec.ts",
+              "line": 12,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "test-3\\inventory.spec.ts",
+      "file": "test-3/inventory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory Page Displays Items After Login and Item Can Be Added to Cart",
+          "file": "test-3/inventory.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Inventory Page Displays Items After Login and Item Can Be Added to Cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1459,
+                      "error": {
+                        "message": "Error: locator.waitFor: Error: strict mode violation: locator('#inventory_container') resolved to 2 elements:\n    1) <div id=\"inventory_container\">…</div> aka locator('#inventory_container').first()\n    2) <div id=\"inventory_container\" class=\"inventory_container\" data-test=\"inventory-container\">…</div> aka locator('[data-test=\"inventory-container\"]')\n\nCall log:\n\u001b[2m  - waiting for locator('#inventory_container') to be visible\u001b[22m\n",
+                        "stack": "Error: locator.waitFor: Error: strict mode violation: locator('#inventory_container') resolved to 2 elements:\n    1) <div id=\"inventory_container\">…</div> aka locator('#inventory_container').first()\n    2) <div id=\"inventory_container\" class=\"inventory_container\" data-test=\"inventory-container\">…</div> aka locator('[data-test=\"inventory-container\"]')\n\nCall log:\n\u001b[2m  - waiting for locator('#inventory_container') to be visible\u001b[22m\n\n    at InventoryPage.goto (C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\pages\\InventoryPage.ts:67:35)\n    at C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\inventory.spec.ts:24:5",
+                        "location": {
+                          "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\pages\\InventoryPage.ts",
+                          "column": 35,
+                          "line": 67
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mtest-3\\pages\\InventoryPage.ts:67\n\n\u001b[0m \u001b[90m 65 |\u001b[39m   \u001b[36masync\u001b[39m goto()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.saucedemo.com/inventory.html'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39minventoryContainer\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m   }\n \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36masync\u001b[39m clickFirstAddToCart()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\pages\\InventoryPage.ts",
+                            "column": 35,
+                            "line": 67
+                          },
+                          "message": "Error: locator.waitFor: Error: strict mode violation: locator('#inventory_container') resolved to 2 elements:\n    1) <div id=\"inventory_container\">…</div> aka locator('#inventory_container').first()\n    2) <div id=\"inventory_container\" class=\"inventory_container\" data-test=\"inventory-container\">…</div> aka locator('[data-test=\"inventory-container\"]')\n\nCall log:\n\u001b[2m  - waiting for locator('#inventory_container') to be visible\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtest-3\\pages\\InventoryPage.ts:67\n\n\u001b[0m \u001b[90m 65 |\u001b[39m   \u001b[36masync\u001b[39m goto()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n \u001b[90m 66 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.saucedemo.com/inventory.html'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39minventoryContainer\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'visible'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m   }\n \u001b[90m 69 |\u001b[39m\n \u001b[90m 70 |\u001b[39m   \u001b[36masync\u001b[39m clickFirstAddToCart()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m\n\u001b[2m    at InventoryPage.goto (C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\pages\\InventoryPage.ts:67:35)\u001b[22m\n\u001b[2m    at C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\inventory.spec.ts:24:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T01:39:03.357Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\test-results\\test-3-inventory-Inventory-9292e-d-Item-Can-Be-Added-to-Cart\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-3\\pages\\InventoryPage.ts",
+                        "column": 35,
+                        "line": 67
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "84ad84b7f357dc524f43-df85a854b7fd9e80f52a",
+              "file": "test-3/inventory.spec.ts",
+              "line": 27,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "test-4\\checkout.spec.ts",
+      "file": "test-4/checkout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Checkout Form Accepts Required Fields and Completes Order Successfully",
+          "file": "test-4/checkout.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Checkout Form Accepts Required Fields and Completes Order Successfully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1863,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T01:39:03.316Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c91751773d51907c5408-50c1f71aeda7ec197ab0",
+              "file": "test-4/checkout.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "test-5\\order-confirmation-back-home.spec.ts",
+      "file": "test-5/order-confirmation-back-home.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Back Home Button After Order Completion Returns User to Inventory Page",
+          "file": "test-5/order-confirmation-back-home.spec.ts",
+          "line": 11,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Back Home Button After Order Completion Returns User to Inventory Page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 886,
+                      "error": {
+                        "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/login\", waiting until \"load\"\u001b[22m\n\n    at LoginPage.goto (C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\pages\\LoginPage.ts:32:21)\n    at C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\order-confirmation-back-home.spec.ts:28:21",
+                        "location": {
+                          "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\pages\\LoginPage.ts",
+                          "column": 21,
+                          "line": 32
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39mtest-5\\pages\\LoginPage.ts:32\n\n\u001b[0m \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36masync\u001b[39m goto()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   }\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m   \u001b[36masync\u001b[39m fillUsername(username\u001b[33m:\u001b[39m string)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\pages\\LoginPage.ts",
+                            "column": 21,
+                            "line": 32
+                          },
+                          "message": "Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtest-5\\pages\\LoginPage.ts:32\n\n\u001b[0m \u001b[90m 30 |\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36masync\u001b[39m goto()\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   }\n \u001b[90m 34 |\u001b[39m\n \u001b[90m 35 |\u001b[39m   \u001b[36masync\u001b[39m fillUsername(username\u001b[33m:\u001b[39m string)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m {\u001b[0m\n\u001b[2m    at LoginPage.goto (C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\pages\\LoginPage.ts:32:21)\u001b[22m\n\u001b[2m    at C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\order-confirmation-back-home.spec.ts:28:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-03-28T01:39:03.414Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\sgoya\\OneDrive\\Documents\\GitHub\\qa-automation-portfolio\\SauceDemoScripts\\tests\\test-5\\pages\\LoginPage.ts",
+                        "column": 21,
+                        "line": 32
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ca37b7fa9f684c367a4c-99980ef1d740140f81e4",
+              "file": "test-5/order-confirmation-back-home.spec.ts",
+              "line": 52,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-28T01:39:01.633Z",
+    "duration": 4661.879,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}
