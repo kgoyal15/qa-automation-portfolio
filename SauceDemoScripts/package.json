@@ -1,7 +1,7 @@
 {
-  "name": "saucedemo-playwright-tests",
+  "name": "playwright-saucedemo-tests",
   "version": "1.0.0",
-  "description": "Playwright Test automation for SauceDemo",
+  "description": "Playwright E2E tests for SauceDemo order confirmation back home flow",
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
@@ -9,10 +9,7 @@
     "report": "playwright show-report"
   },
   "devDependencies": {
-    "@playwright/test": "latest",
-    "typescript": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=20.0.0"
+    "@playwright/test": "^1.44.0",
+    "typescript": "^5.4.5"
   }
 }

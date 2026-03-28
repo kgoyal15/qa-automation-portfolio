@@ -29,7 +29,7 @@ export class LoginPage {
   }
 
   async goto(): Promise<void> {
-    await this.page.goto('/login');
+    await this.page.goto('https://www.saucedemo.com/');
   }
 
   async fillUsername(username: string): Promise<void> {

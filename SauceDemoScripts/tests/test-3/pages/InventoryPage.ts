@@ -13,9 +13,9 @@ export class InventoryPage {
   constructor(private readonly page: Page) {
     // Inventory container — uncomment the line that matches your app's DOM:
     // this.inventoryContainer = page.getByTestId('inventory-container');     // data-testid
-    // this.inventoryContainer = page.locator('#inventory_container');        // id attribute
+    // this.inventoryContainer = page.locator('#inventory_container');        // id attribute (resolves to 2 elements — avoid)
     // this.inventoryContainer = page.locator('.inventory_container');        // CSS class
-    this.inventoryContainer = page.locator('#inventory_container');           // ← active (best guess — verify in DevTools)
+    this.inventoryContainer = page.locator('[data-test="inventory-container"]'); // ← active (verify in DevTools)
 
     // All inventory items — uncomment the line that matches your app's DOM:
     // this.inventoryItems = page.getByTestId('inventory-item');              // data-testid

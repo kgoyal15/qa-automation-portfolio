@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   use: {
     trace: 'on-first-retry',
-    headless: !!process.env.CI,
+    headless: false,
     // Use saved auth state if pre-test.js has been run
     ...(fs.existsSync('auth.json') ? { storageState: 'auth.json' } : {}),
   },
