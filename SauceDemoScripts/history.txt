@@ -1,18 +1,4 @@
 ##just added file to fire workflow
 ## added another line in txt file
 ## Trigger Git Hub Action 
-## added line 4 to start workflow
-## added line 4 
-## added line 5
-## added line 6
-## added line 7
-## added line 8
-## added line 9
-## added line 10
-##first run problem
-## second and third run problem
-## foruth and firth glitch
-##siztth glitch
-## standard 1
-## standard 2 
-## standard 3
+## added line 1
